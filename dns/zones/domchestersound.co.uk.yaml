@@ -37,6 +37,18 @@
   type: A
   value: 139.162.251.66
 
+# DMARC
+_dmarc:
+  octodns:
+    cloudflare:
+      auto-ttl: true
+  ttl: 300
+  type: TXT
+  value: >
+    v=DMARC1\;
+    p=none\;
+    rua=mailto:0dd07add46d845bbbc7516d0a76f962e@dmarc-reports.cloudflare.net\;
+
 # Fastmail
 fm1._domainkey:
   octodns:
@@ -63,15 +75,3 @@ fm3._domainkey:
   ttl: 300
   type: CNAME
   value: fm3.domchestersound.co.uk.dkim.fmhosted.com.
-
-# DMARC
-_dmarc:
-  octodns:
-    cloudflare:
-      auto-ttl: true
-  ttl: 300
-  type: TXT
-  value: >
-    v=DMARC1\;
-    p=none\;
-    rua=mailto:0dd07add46d845bbbc7516d0a76f962e@dmarc-reports.cloudflare.net\;
