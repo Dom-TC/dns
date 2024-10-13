@@ -28,6 +28,18 @@
     type: TXT
     value: v=spf1 include:spf.messagingengine.com ?all
 
+# DMARC
+_dmarc:
+  octodns:
+    cloudflare:
+      auto-ttl: true
+  ttl: 300
+  type: TXT
+  value: >
+    v=DMARC1\;
+    p=none\;
+    rua=mailto:014f4cd73b91463794ff4347be6f7e4a@dmarc-reports.cloudflare.net\;
+
 # Fastmail
 fm1._domainkey:
   octodns:

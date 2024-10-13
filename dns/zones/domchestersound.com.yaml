@@ -37,6 +37,18 @@
   type: A
   value: 139.162.251.66
 
+# DMARC
+_dmarc:
+  octodns:
+    cloudflare:
+      auto-ttl: true
+  ttl: 300
+  type: TXT
+  value: >
+    v=DMARC1\;
+    p=none\;
+    rua=mailto:5c297e656a0a4275976ab6c880181a8e@dmarc-reports.cloudflare.net\;
+
 # Fastmail
 fm1._domainkey:
   octodns:
