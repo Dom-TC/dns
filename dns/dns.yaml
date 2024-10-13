@@ -1,0 +1,35 @@
+---
+manager:
+  max_workers: 4
+
+providers:
+  config:
+    class: octodns.provider.yaml.YamlProvider
+    directory: dns/zones
+    default_ttl: 3600
+    enforce_order: True
+  cloudflare:
+    class: octodns_cloudflare.CloudflareProvider
+    token: env/CLOUDFLARE_TOKEN
+
+zones:
+  domchester.co.uk.:
+    sources:
+      - config
+    targets:
+      - cloudflare
+  domchester.com.:
+    sources:
+      - config
+    targets:
+      - cloudflare
+  domchestersound.co.uk.:
+    sources:
+      - config
+    targets:
+      - cloudflare
+  domchestersound.com.:
+    sources:
+      - config
+    targets:
+      - cloudflare
