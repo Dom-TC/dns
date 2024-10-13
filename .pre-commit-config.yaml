@@ -1,3 +1,4 @@
+---
 default_language_version:
   python: python3.12
 repos:
@@ -69,7 +70,10 @@ repos:
       - id: poetry-lock
         language_version: python3.12
       - id: poetry-export
-        args: ["-f", "requirements.txt", "-o", "requirements.txt", "--without-hashes"]
+        args:
+          - "-f requirements.txt"
+          - "-o requirements.txt"
+          - "--without-hashes"
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.15.0
     hooks:
@@ -86,3 +90,8 @@ repos:
     rev: v8.20.1
     hooks:
       - id: gitleaks
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.29.0
+    hooks:
+      - id: yamllint
+        args: [--strict]
