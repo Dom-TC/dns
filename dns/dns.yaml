@@ -1,6 +1,9 @@
 ---
 manager:
   max_workers: 4
+  plan_outputs:
+    html:
+      class: octodns.provider.plan.PlanHtml
 
 providers:
   config:
