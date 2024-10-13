@@ -35,7 +35,7 @@ _dmarc:
       auto-ttl: true
   ttl: 300
   type: TXT
-  value: >
+  value: >-
     v=DMARC1\;
     p=none\;
     rua=mailto:014f4cd73b91463794ff4347be6f7e4a@dmarc-reports.cloudflare.net\;
