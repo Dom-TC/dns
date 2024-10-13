@@ -9,8 +9,12 @@ env:
   CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
 
 jobs:
+  test-and-lint:
+    uses: ./.github/workflows/test-and-lint.yaml
+
   dry-run:
     runs-on: ubuntu-20.04
+    needs: [test-and-lint]
     permissions:
       contents: read
       packages: read

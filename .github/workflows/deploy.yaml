@@ -14,7 +14,7 @@ env:
 
 jobs:
   test-and-lint:
-    uses: ./.github/workflows/tests.yaml
+    uses: ./.github/workflows/test-and-lint.yaml
 
   deploy:
     runs-on: ubuntu-20.04
