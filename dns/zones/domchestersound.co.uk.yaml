@@ -49,6 +49,15 @@ _dmarc:
     p=none\;
     rua=mailto:0dd07add46d845bbbc7516d0a76f962e@dmarc-reports.cloudflare.net\;
 
+# Verification for transfer to porkbun
+bun-verify:
+  octodns:
+    cloudflare:
+      auto-ttl: true
+  ttl: 300
+  type: TXT
+  value: e3669315aa0a996fcf421b996013b9182cc009b7df956e1a39267363b8ae3230
+
 # Fastmail
 fm1._domainkey:
   octodns:
