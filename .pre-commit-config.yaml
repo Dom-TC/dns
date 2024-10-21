@@ -82,10 +82,6 @@ repos:
     rev: v2.12.0
     hooks:
       - id: hadolint
-  - repo: "https://github.com/crate-ci/typos"
-    rev: v1.26.0
-    hooks:
-      - id: typos
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.20.1
     hooks:
