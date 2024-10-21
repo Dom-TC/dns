@@ -36,3 +36,8 @@ zones:
       - config
     targets:
       - cloudflare
+  djtc.me.:
+    sources:
+      - config
+    targets:
+      - cloudflare
