@@ -1,0 +1,17 @@
+---
+# Alias root to domchester.com
+"":
+  octodns:
+    cloudflare:
+      auto-ttl: true
+  ttl: 300
+  type: ALIAS
+  value: domchester.com.
+
+www:
+  octodns:
+    cloudslare:
+      auto-ttl: true
+  ttl: 300
+  type: CNAME
+  value: djtc.me.
