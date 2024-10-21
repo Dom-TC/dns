@@ -93,3 +93,13 @@ repos:
     hooks:
       - id: yamllint
         args: [--strict]
+  - repo: local
+    hooks:
+      - id: octodns-validate
+        name: octodns-validate
+        entry: >-
+          bash -c 'export CLOUDFLARE_TOKEN=pre-commit-fake';
+          poetry run octodns-validate --config-file=dns/dns.yaml
+        language: system
+        types: [file, yaml]
+        pass_filenames: false
