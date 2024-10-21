@@ -1,12 +1,51 @@
 ---
-# Alias root to domchester.com
 "":
+  # Alias root to domchester.com
+  - octodns:
+      cloudflare:
+        auto-ttl: true
+    ttl: 300
+    type: ALIAS
+    value: domchester.com.
+
+  - octodns:
+      cloudflare:
+        auto-ttl: true
+    ttl: 300
+    type: TXT
+    value: v=spf1 -all
+
+  - octodns:
+      cloudflare:
+        auto-ttl: true
+    ttl: 300
+    type: MX
+    values:
+      - exchange: .
+        preference: 0
+
+"*._domainkey":
   octodns:
     cloudflare:
       auto-ttl: true
   ttl: 300
-  type: ALIAS
-  value: domchester.com.
+  type: TXT
+  value: v=DKIM1\; p=
+
+_dmarc:
+  octodns:
+    cloudflare:
+      auto-ttl: true
+  ttl: 300
+  type: TXT
+  value: >-
+    v=DMARC1\;
+    p=reject\;
+    sp=reject\;
+    adkim=s\;
+    aspf=s\;
+    fo=1\;
+    rua=mailto:09930ca91112409dad432bb7dab3dc29@dmarc-reports.cloudflare.net
 
 www:
   octodns:
