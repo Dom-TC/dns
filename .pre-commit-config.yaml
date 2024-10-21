@@ -101,5 +101,6 @@ repos:
           bash -c 'export CLOUDFLARE_TOKEN=pre-commit-fake';
           poetry run octodns-validate --config-file=dns/dns.yaml
         language: system
+        files: ^dns/
         types: [file, yaml]
         pass_filenames: false
