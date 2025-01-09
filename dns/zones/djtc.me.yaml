@@ -5,7 +5,7 @@
       cloudflare:
         auto-ttl: true
     ttl: 300
-    type: ALIAS
+    type: CNAME
     value: domchester.com.
 
   - octodns:
