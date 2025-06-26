@@ -1,12 +1,12 @@
 ---
 "":
-  # Alias root to domchester.com
+  # Point to domserv-001 via tailscale
   - octodns:
       cloudflare:
         auto-ttl: true
     ttl: 300
-    type: ALIAS
-    value: domchester.com.
+    type: A
+    value: 100.114.66.120
 
   - octodns:
       cloudflare:

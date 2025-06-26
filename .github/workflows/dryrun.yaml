@@ -13,7 +13,7 @@ jobs:
     uses: ./.github/workflows/test-and-lint.yaml
 
   dry-run:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: [test-and-lint]
     permissions:
       contents: read
